@@ -22,21 +22,21 @@ function generateHTML(data) {
                         <h3>Manager</h3>
                         <p>Name: <span></span></p>
                         <p>ID: <span></span></p>
-                        <p>Email: <span></span></p>
+                        <p>Email: <span><a href="mailto: " title="Link to email address"></a></span></p>
                     </div>
                     <div class="col" id="box">
                         <h3>Engineer</h3>
                         <p>Name: <span></span></p>
                         <p>ID: <span></span></p>
-                        <p>Email: <span></span></p>
-                        <p>GitHub: <span></span></p>
+                        <p>Email: <span><a href="mailto: " title="Link to email address"></a></span></p>
+                        <p>GitHub: <span><a href="" target="_blank" title="Link to engineer's GitHub profile">GitHub</a></span></p>
                     </div>
                     <div class="col" id="box">
                         <h3>Engineer</h3>
                         <p>Name: <span></span></p>
                         <p>ID: <span></span></p>
-                        <p>Email: <span></span></p>
-                        <p>GitHub: <span></span></p>
+                        <p>Email: <span><a href="mailto: " title="Link to email address"></a></span></p>
+                        <p>GitHub: <span><a href="" target="_blank" title="Link to engineer's GitHub profile">GitHub</a></span></p>
                     </div>
                 </div>
                 <div class="row d-flex justify-content-center justify-content-between box-container">
@@ -44,14 +44,14 @@ function generateHTML(data) {
                         <h3>Intern</h3>
                         <p>Name: <span></span></p>
                         <p>ID: <span></span></p>
-                        <p>Email: <span></span></p>
+                        <p>Email: <span><a href="mailto: " title="Link to email address"></a></span></p>
                         <p>School: <span></span></p>
                     </div>
                     <div class="col" id="box">
                         <h3>Intern</h3>
                         <p>Name: <span></span></p>
                         <p>ID: <span></span></p>
-                        <p>Email: <span></span></p>
+                        <p>Email: <span><a href="mailto: " title="Link to email address"></a></span></p>
                         <p>School: <span></span></p>
                     </div>
                 </div>
