@@ -1,0 +1,20 @@
+main {
+    background-color: lightslategray;
+}
+
+header {
+    padding: 40px;
+    background-color: lightcoral;
+    text-align: center;
+}
+
+h1 {
+    font-size: 70px;
+    font-weight: bolder;
+}
+
+#box {
+    margin: 30px;
+    border: 6px solid lightcoral;
+    border: 25px;
+}
