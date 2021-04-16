@@ -6,3 +6,68 @@ const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
+const members = [];
+
+function managerQuestions() {
+    inquirer
+     .prompt([
+         {
+            type: "input",
+            message: "What is the team manager's name?",
+            name: "name",
+         },
+         {
+            type: "input",
+            message: "What is the team manager's employee ID?",
+            name: "id",
+         },
+         {
+            type: "input",
+            message: "What is the team manager's email address?",
+            name: "email",
+         },
+         {
+             type: "input",
+             message: "What is the team manager's office number?",
+             name: "number",
+         }
+    ])
+     .then((answer) => {
+        const manager = new Manager(answer.name, answer.id, answer.email, answer.number);
+        members.push(manager);
+        console.log(members);
+    })
+
+    optionQuestion();
+}
+
+managerQuestions();
+
+/*function optionQuestion() {
+    // inquirer
+    // complete the team -> generateHTML
+}
+
+function engineerQuestions() {
+    // inquirer
+}
+
+function internQuestions() {
+    // inquirer
+}
+
+// Function to write HTML file
+function writeToFile(fileName, template) {
+    fs.writeFile(fileName, template, function(err) {
+        console.log(fileName);
+
+        if (err) {
+            return console.log(err);
+        } else {
+            return console.log("The team is complete!");
+        }
+    })
+}
+
+// Function that runs the whole program
+function init();*/
