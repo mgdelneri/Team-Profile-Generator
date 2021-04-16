@@ -50,22 +50,50 @@ function optionQuestion() {
            choices: ["Engineer", "Intern", "The team is complete"]
          }
      ])
-      .then((answer) => {
-          if (answer === "Engineer") {
+      .then((choice) => {
+          if (choice.option === "Engineer") {
               engineerQuestions();
-          } else if (answer === "Intern") {
+          } else if (choice.option === "Intern") {
               internQuestions();
-          } else if (answer === "The team is complete") {
+          } else if (choice.option === "The team is complete") {
               generateHTML();
           }
       })
 }
 
-managerQuestions();
-
 function engineerQuestions() {
-    // inquirer
+    inquirer
+     .prompt([
+         {
+            type: "input",
+            message: "What is the engineer's name?",
+            name: "name"
+         },
+         {
+            type: "input",
+            message: "What is the engineer's employee ID?",
+            name: "id"
+         },
+         {
+            type: "input",
+            message: "What is the engineer's email address?",
+            name: "email"
+         },
+         {
+            type: "input",
+            message: "What is the engineer's GitHub username?",
+            name: "github"
+         }
+     ])
+     .then((answer) => {
+        const engineer = new Engineer(answer.name, answer.id, answer.email, answer.github);
+        members.push(engineer);
+        console.log(members);
+        optionQuestion();
+     })
 }
+
+managerQuestions();
 
 function internQuestions() {
     // inquirer
