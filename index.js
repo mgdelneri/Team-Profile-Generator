@@ -93,11 +93,39 @@ function engineerQuestions() {
      })
 }
 
-managerQuestions();
-
 function internQuestions() {
-    // inquirer
+    inquirer 
+    .prompt([
+        {
+          type: "input",
+          message: "What is the intern's name?",
+          name: "name"
+        },
+        {
+          type: "input",
+          message: "What is the intern's employee ID?",
+          name: "id"
+        },
+        {
+          type: "input", 
+          message: "What is the intern's email address?",
+          name: "email"
+        },
+        {
+          type: "input", 
+          message: "What is the intern's school?",
+          name: "school"
+        }
+    ])
+    .then((answer) => {
+        const intern = new Intern(answer.name, answer.id, answer.email, answer.school);
+        members.push(intern);
+        console.log(members);
+        optionQuestion();
+    })
 }
+
+managerQuestions();
 
 // Function to write HTML file
 function writeToFile(fileName, template) {
