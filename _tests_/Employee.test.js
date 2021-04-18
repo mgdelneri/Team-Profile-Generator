@@ -26,10 +26,12 @@ describe("Employee", () => {
         })
     });
 
-    /* describe("getRole", () => {
+    describe("getRole", () => {
         it("Should return the employee's role", () => {
+            let person = new Employee();
 
+            expect(person.getRole()).toEqual("Employee");
         })
-    })*/
+    })
 })
 

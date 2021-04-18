@@ -34,10 +34,12 @@ describe("Manager", () => {
         })
     });
 
-    /* describe("getRole", () => {
-        it("Should return the engineer's role", () => {
+    describe("getRole", () => {
+        it("Should return the team member's role", () => {
+            let person = new Manager();
 
+            expect(person.getRole()).toEqual("Manager");
         })
-    })*/
+    })
 })
 

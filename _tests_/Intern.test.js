@@ -34,10 +34,11 @@ describe("Intern", () => {
         })
     });
 
-    /* describe("getRole", () => {
-        it("Should return the intern's role", () => {
+    describe("getRole", () => {
+        it("Should return the team member's role", () => {
+            let person = new Intern();
 
+            expect(person.getRole()).toEqual("Intern");
         })
-    })*/
-
+    })
 })
