@@ -6,8 +6,10 @@ const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
+// Array of Manager, Engineer, and Intern objects with answers to inquirer questions
 const members = [];
 
+// Manager inquirer questions that get pushed into members array when answered
 function managerQuestions() {
     inquirer
      .prompt([
@@ -40,6 +42,7 @@ function managerQuestions() {
     })
 }
 
+// Inquirer question that lets user choose more team members and get directed to further questions, or to finish the team 
 function optionQuestion() {
     inquirer
      .prompt([
@@ -61,6 +64,7 @@ function optionQuestion() {
       })
 }
 
+// Engineer inquirer questions that get pushed into members array when answered
 function engineerQuestions() {
     inquirer
      .prompt([
@@ -93,6 +97,7 @@ function engineerQuestions() {
      })
 }
 
+// Intern inquirer questions that get pushed into members array when answered
 function internQuestions() {
     inquirer 
     .prompt([
@@ -125,6 +130,7 @@ function internQuestions() {
     })
 }
 
+// Calls manager function to start the program
 managerQuestions();
 
 // Function to write HTML file
@@ -140,5 +146,21 @@ function writeToFile(fileName, template) {
     })
 }
 
+// Function that connects user inputs to generated HTML
+function writeHTML(data) {
+    let html = generateHTML(data);
+    writeToFile('./dist/team.html', html);
+}
+
+
+
+// Promise(managerQuestions()).then(writeHTML())
 // Function that runs the whole program
-// function init()
+// init();
+
+/*Promise.all([p1, p2, p3])
+  .then((values) => {
+    console.log('\nThe returned array from our Promise.all() call:');
+    console.log(values);
+  })
+  .catch((err) => new Error(err));*/
