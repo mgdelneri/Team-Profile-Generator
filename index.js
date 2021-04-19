@@ -37,7 +37,6 @@ function managerQuestions() {
      .then((answer) => {
         const manager = new Manager(answer.name, answer.id, answer.email, answer.number);
         members.push(manager);
-        console.log(members);
         optionQuestion();
     })
 }
@@ -92,7 +91,6 @@ function engineerQuestions() {
      .then((answer) => {
         const engineer = new Engineer(answer.name, answer.id, answer.email, answer.github);
         members.push(engineer);
-        console.log(members);
         optionQuestion();
      })
 }
@@ -125,7 +123,6 @@ function internQuestions() {
     .then((answer) => {
         const intern = new Intern(answer.name, answer.id, answer.email, answer.school);
         members.push(intern);
-        console.log(members);
         optionQuestion();
     })
 }
