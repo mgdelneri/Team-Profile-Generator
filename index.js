@@ -59,7 +59,7 @@ function optionQuestion() {
           } else if (choice.option === "Intern") {
               internQuestions();
           } else if (choice.option === "The team is complete") {
-              generateHTML();
+              writeHTML();
           }
       })
 }
@@ -147,20 +147,8 @@ function writeToFile(fileName, template) {
 }
 
 // Function that connects user inputs to generated HTML
-function writeHTML(data) {
-    let html = generateHTML(data);
+function writeHTML() {
+    let html = generateHTML(members);
     writeToFile('./dist/team.html', html);
 }
 
-
-
-// Promise(managerQuestions()).then(writeHTML())
-// Function that runs the whole program
-// init();
-
-/*Promise.all([p1, p2, p3])
-  .then((values) => {
-    console.log('\nThe returned array from our Promise.all() call:');
-    console.log(values);
-  })
-  .catch((err) => new Error(err));*/
